@@ -73,11 +73,11 @@ public class GildedRoseTests
     }
 
     [Fact]
-    public void Quality_NeverGoesAbove50()
+    public void Quality_NeverGoesAbove40()
     {
-        var items2 = new List<Item> { new() { Name = "Aged Brie", SellIn = 1, Quality = 50 } };
-        var app2 = new GildedRose(items2);
-        app2.UpdateQuality();
-        Assert.Equal(50, items2[0].Quality);
+        var items = new List<Item> { new() { Name = "Aged Brie", SellIn = 1, Quality = 40 } };
+        var app = new GildedRose(items);
+        app.UpdateQuality();
+        Assert.Equal(40, items[0].Quality);
     }
 }
